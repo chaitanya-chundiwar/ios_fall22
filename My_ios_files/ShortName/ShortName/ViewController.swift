@@ -30,9 +30,10 @@ class ViewController: UIViewController {
         var name  = nameOutlet.text!
         
         if(name.count>=4){
-            displayLabel.text =   name[name.index(name.startIndex,offsetBy: 5)]
+        //    var fourChar = name[name.startIndex..<name.index(name.startIndex,offsetBy: 4)]
             
-        
+            var fourChar = name.prefix(4)
+            displayLabel.text = "\(fourChar)"
             
         }else{
             displayLabel.text = "please enter your name with atleast 4 characters"
